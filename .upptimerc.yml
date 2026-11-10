@@ -39,7 +39,7 @@ status-website:
   favicon: https://procteye.com/favicon.svg
   name: Procteye status
   introTitle: "Procteye status"
-  introMessage: "Live status and uptime history of the Procteye website, API, test sessions, recruiter app and docs. Also at [procteye.github.io/status](https://procteye.github.io/status) if this domain does not resolve."
+  introMessage: "Live status and uptime history of the Procteye website, API, test service, recruiter app and docs. Also at [procteye.github.io/status](https://procteye.github.io/status) if this domain does not resolve."
   navbar:
     - title: Status
       href: /

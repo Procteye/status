@@ -19,7 +19,7 @@ const MAJOR_MINUTES = 60;
 const GROUPS = [
   { name: "Candidates", items: [
     { slug: "website", name: "Website and job board", host: "procteye.com" },
-    { slug: "test-sessions", name: "Test sessions", host: "tests.procteye.com" },
+    { slug: "test-sessions", name: "Test service", host: "tests.procteye.com" },
   ] },
   { name: "Recruiters", items: [
     { slug: "recruiter", name: "Recruiter app", host: "recruiter.procteye.com" },
@@ -130,7 +130,7 @@ function renderHero(sites, openIssues) {
   const states = components.map((c) => currentState(sites.find((s) => s.slug === c.slug)));
   let state = "ok";
   let headline = "All systems operational.";
-  let lede = "The website, API, test sessions, recruiter app and docs are all working normally.";
+  let lede = "The website, API, test service, recruiter app and docs are all working normally.";
   let pill = "All operational";
   let foot = "Every check passed";
   if (!monitored) {

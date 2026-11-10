@@ -370,6 +370,7 @@ h2 {
   .bar:nth-child(-n + 60) { display: none; }
   .from-90 { display: none; }
   .from-30 { display: inline; }
+  .legend { display: grid; grid-template-columns: repeat(2, max-content); gap: 0.5rem 1.5rem; }
   .block { padding-block: 2.75rem 0; }
 }
 
