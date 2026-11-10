@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>https://status.procteye.com/feed.xml</id>
+  <title>Procteye status: incidents</title>
+  <link rel="alternate" href="https://status.procteye.com/"/>
+  <link rel="self" href="https://status.procteye.com/feed.xml"/>
+  <updated>2026-11-10T02:30:13.600Z</updated>
+  <author><name>Procteye</name></author>
+</feed>

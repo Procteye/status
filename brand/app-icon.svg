@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Procteye application tile. Intended for desktop/mobile icon export. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Procteye application icon</title>
+  <desc id="desc">Procteye evidence symbol on a light rounded application tile.</desc>
+  <defs>
+    <linearGradient id="tile" x1="48" y1="36" x2="464" y2="478" gradientUnits="userSpaceOnUse"><stop stop-color="#FFF"/><stop offset="1" stop-color="#F7F9FB"/></linearGradient>
+    <path id="evidenceStream" d="M85.12 36H173.44L252.16 118V151C213.76 162 192.64 195 192.64 236V276C192.64 317 213.76 350 252.16 361V394L173.44 476H85.12C62.08 476 46.72 460 46.72 436V404L169.6 276L46.72 148V76C46.72 52 62.08 36 85.12 36Z"/>
+  </defs>
+  <rect x="20" y="20" width="472" height="472" rx="112" fill="url(#tile)" stroke="#D0D5DD" stroke-width="3"/>
+  <g transform="translate(76 76) scale(.703125)"><use href="#evidenceStream" fill="#0051D5"/><use href="#evidenceStream" fill="#0051D5" transform="translate(512 0) scale(-1 1)"/></g>
+</svg>
