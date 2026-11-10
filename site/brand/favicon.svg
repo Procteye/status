@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Procteye favicon. Uses the canonical symbol geometry without alteration. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Procteye favicon</title>
+  <desc id="desc">Procteye evidence symbol for very small displays.</desc>
+  <defs><path id="evidenceStream" d="M85.12 36H173.44L252.16 118V151C213.76 162 192.64 195 192.64 236V276C192.64 317 213.76 350 252.16 361V394L173.44 476H85.12C62.08 476 46.72 460 46.72 436V404L169.6 276L46.72 148V76C46.72 52 62.08 36 85.12 36Z"/></defs>
+  <use href="#evidenceStream" fill="#0051D5"/><use href="#evidenceStream" fill="#0051D5" transform="translate(512 0) scale(-1 1)"/>
+</svg>
