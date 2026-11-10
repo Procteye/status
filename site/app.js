@@ -4,7 +4,7 @@
 // check runs.
 "use strict";
 
-const REPO = "procteye/status";
+const REPO = "Procteye/status";
 // A local preview (localhost) reads the sample data in ../preview instead.
 const PREVIEW = location.hostname === "localhost";
 const SUMMARY_URL = PREVIEW ? "../preview/summary.json" : `https://raw.githubusercontent.com/${REPO}/main/history/summary.json`;
@@ -338,6 +338,14 @@ async function load() {
   renderComponents(sites, issues);
   renderHistory(issues);
 }
+
+$("year").textContent = String(new Date().getFullYear());
+// The top bar gains its border and shadow once the page scrolls, as on the
+// landing site's navbar.
+const topbar = $("topbar");
+const onScroll = () => { topbar.dataset.scrolled = String(window.scrollY > 40); };
+window.addEventListener("scroll", onScroll, { passive: true });
+onScroll();
 
 load();
 setInterval(load, 5 * 60 * 1000);
