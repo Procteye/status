@@ -1,21 +1,15 @@
-// Applies the visitor's theme choice before first paint (landing DESIGN.md
-// Light, Dark or System): localStorage "procteye.theme" is "light" or "dark"; anything else,
-// or storage that throws, means System and leaves the OS setting in charge.
+// Applies the visitor's theme before first paint. As on the landing site
+// (DESIGN.md), Light is the default: localStorage "procteye.theme" is "dark"
+// or "system"; anything else, or storage that throws, means Light.
 /* global localStorage, document */
 (function () {
+  var value = null;
   try {
-    var value = localStorage.getItem("procteye.theme");
-    if (value === "light" || value === "dark") {
-      document.documentElement.setAttribute("data-theme", value);
-      // A forced theme gets one browser-bar colour instead of the two
-      // OS-qualified tags.
-      var tags = document.querySelectorAll('meta[name="theme-color"]');
-      for (var i = 0; i < tags.length; i++) {
-        tags[i].setAttribute("content", value === "dark" ? "#020617" : "#f7f9fb");
-        tags[i].removeAttribute("media");
-      }
-    }
+    value = localStorage.getItem("procteye.theme");
   } catch {
-    // Blocked storage means System.
+    // Blocked storage means Light.
+  }
+  if (value !== "system") {
+    document.documentElement.setAttribute("data-theme", value === "dark" ? "dark" : "light");
   }
 })();
