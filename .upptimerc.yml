@@ -1,0 +1,49 @@
+# Upptime configuration for status.procteye.com. Upptime is only the monitor
+# and data store (history/, api/, graphs/ and issues labelled "status"); the
+# page in site/ reads that data and is published by the "Procteye status site"
+# workflow. Upptime's own Static Site CI stays disabled so it never overwrites
+# gh-pages. Procteye is live, so every check runs from the first commit.
+owner: procteye
+repo: status
+
+# One check per public production component, unauthenticated GET only.
+# The gateway's /api/health is public; the test service keeps its health
+# routes off the internet, so it is probed through its public /api/ping
+# (204 No Content). The job board is served by the website host
+# (procteye.com/jobs), so the website check covers it.
+sites:
+  - name: Website
+    url: https://procteye.com/
+    slug: website
+  - name: API
+    url: https://api.procteye.com/api/health
+    slug: api
+  - name: Test sessions
+    url: https://tests.procteye.com/api/ping
+    slug: test-sessions
+    expectedStatusCodes:
+      - 204
+  - name: Recruiter app
+    url: https://recruiter.procteye.com/
+    slug: recruiter
+  - name: Docs
+    url: https://docs.procteye.com/
+    slug: docs
+
+assignees:
+  - koushikraj-s
+
+status-website:
+  cname: status.procteye.com
+  logoUrl: https://procteye.com/brand/symbol-512.png
+  favicon: https://procteye.com/favicon.svg
+  name: Procteye status
+  introTitle: "Procteye status"
+  introMessage: "Live status and uptime history of the Procteye website, API, test sessions, recruiter app and docs. Also at [procteye.github.io/status](https://procteye.github.io/status) if this domain does not resolve."
+  navbar:
+    - title: Status
+      href: /
+    - title: Procteye
+      href: https://procteye.com
+    - title: Incident history
+      href: https://github.com/$OWNER/$REPO/issues?q=is%3Aissue
