@@ -10,7 +10,10 @@ Uptime monitor and public status page for [Procteye](https://procteye.com), live
 - **Page:** `site/` is a static page that reads `history/summary.json` and the
   `status` issues in the browser. The "Procteye status site" workflow publishes it,
   with an Atom feed of incidents (`.github/scripts/build-feed.mjs`), to `gh-pages`.
-  Upptime's own Static Site CI is disabled so it never overwrites `gh-pages`.
+  Upptime's own static site build is removed: `site.yml` and `update-template.yml`
+  are deleted, and Setup CI no longer runs the template update or the site deploy,
+  so nothing else writes to `gh-pages` or restores those files. Upgrade Upptime by
+  hand: bump the `upptime/uptime-monitor` version in the remaining workflows.
 
 ## Local preview
 

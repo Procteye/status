@@ -1,8 +1,8 @@
 # Upptime configuration for status.procteye.com. Upptime is only the monitor
 # and data store (history/, api/, graphs/ and issues labelled "status"); the
 # page in site/ reads that data and is published by the "Procteye status site"
-# workflow. Upptime's own Static Site CI stays disabled so it never overwrites
-# gh-pages. Procteye is live, so every check runs from the first commit.
+# workflow. Upptime's own static site build and template updater are removed
+# so they never overwrite gh-pages or restore that build. Procteye is live, so every check runs from the first commit.
 owner: procteye
 repo: status
 

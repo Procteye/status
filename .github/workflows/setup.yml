@@ -14,6 +14,9 @@
 # * More by Anand Chowdhary: https://anandchowdhary.com
 
 
+# Edited by hand: the "Update template", "Generate site" and "GitHub Pages
+# Deploy" steps are removed, so Setup never restores Upptime's site build or
+# overwrites the status page on gh-pages.
 name: Setup CI
 on:
   push:
@@ -48,12 +51,6 @@ jobs:
         with:
           ref: ${{ github.head_ref || github.ref_name }}
           token: ${{ steps.app_token.outputs.token || secrets.GH_PAT || github.token }}
-      - name: Update template
-        uses: upptime/uptime-monitor@v1.46.5
-        with:
-          command: "update-template"
-        env:
-          GH_PAT: ${{ steps.app_token.outputs.token || secrets.GH_PAT || github.token }}
       - name: Update response time
         uses: upptime/uptime-monitor@v1.46.5
         with:
@@ -87,17 +84,3 @@ jobs:
           command: "graphs"
         env:
           GH_PAT: ${{ steps.app_token.outputs.token || secrets.GH_PAT || github.token }}
-      - name: Generate site
-        uses: upptime/uptime-monitor@v1.46.5
-        with:
-          command: "site"
-        env:
-          GH_PAT: ${{ steps.app_token.outputs.token || secrets.GH_PAT || github.token }}
-      - uses: peaceiris/actions-gh-pages@v4
-        name: GitHub Pages Deploy
-        with:
-          github_token: ${{ steps.app_token.outputs.token || secrets.GH_PAT || github.token }}
-          publish_dir: "site/status-page/__sapper__/export/"
-          force_orphan: "false"
-          user_name: "Upptime Bot"
-          user_email: "73812536+upptime-bot@users.noreply.github.com"

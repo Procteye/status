@@ -1,7 +1,7 @@
 # Publishes the Procteye status page (site/) to GitHub Pages. Upptime keeps
 # running the checks and writing history/ and issues; the page reads that data
 # in the browser, so it only needs publishing when site/ changes. Upptime's
-# own Static Site CI is disabled so it never overwrites gh-pages. The incident
+# own static site build is removed so it never overwrites gh-pages. The incident
 # feed (feed.xml) is rebuilt on every publish, and an incident change publishes
 # again so subscribers see it.
 name: Procteye status site
